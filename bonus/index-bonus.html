@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style-bonus.css">
+    <title>vue-hello bonus</title>
+  </head>
+  <body>
+
+    <div id="root">
+      <!-- V-BIND -> : -->
+      <div :style="'color: ' + color + '; font-size: ' + fontsize + 'px'">{{text}}</div>
+      <!-- V-ON -> @ -->
+      <button @click="changeColor">cambia colore</button>
+      <button @click="changeFontSize">cambia dimensione</button>
+
+      <div class="input">
+        <!-- V-MODEL -->
+        <input v-model="input" placeholder="Inserisci del testo..."></input>
+        <p>Il testo che hai inserito è {{input}}</p>
+      </div>
+
+    </div>
+
+    <script src="js/script-bonus.js" charset="utf-8"></script>
+  </body>
+</html>
